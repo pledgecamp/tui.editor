@@ -16,6 +16,7 @@
   "main": "dist/toastui-editor.js",
   "files": [
     "dist/*.js",
+    "dist/*.esm",
     "dist/*.css",
     "dist/i18n",
     "index.d.ts"
@@ -54,6 +55,7 @@
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
+    "@purtuga/esm-webpack-plugin": "^1.5.0",
     "@toast-ui/release-notes": "^2.0.1",
     "@toast-ui/squire": "file:../../libs/squire",
     "@toast-ui/to-mark": "file:../../libs/to-mark",

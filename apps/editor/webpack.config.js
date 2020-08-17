@@ -11,6 +11,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const EsmWebpackPlugin = require("@purtuga/esm-webpack-plugin");
 
 const ENTRY_EDITOR = './src/js/index.js';
 const ENTRY_VIEWER = './src/js/indexViewer.js';
@@ -66,6 +67,7 @@ const defaultConfigs = Array(isProduction ? 2 : 1)
         ]
       },
       plugins: [
+        new EsmWebpackPlugin(),
         new MiniCssExtractPlugin({
           moduleFilename: ({ name }) =>
             `toastui-${name.replace('-all', '')}${minify ? '.min' : ''}.css`
