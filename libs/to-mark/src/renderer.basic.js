@@ -75,7 +75,9 @@ export default Renderer.factory({
     }
 
     if (!this.isEmptyText(subContent) && url) {
-      res = `[${this.escapeTextForLink(subContent)}](${url}${title})`;
+      if (subContent.length < 3 || subContent.substring(0, 3) !== '[![') {
+        res = `[${this.escapeTextForLink(subContent)}](${url}${title})`;
+      }
     }
 
     return res;
@@ -85,7 +87,12 @@ export default Renderer.factory({
     const { alt } = node;
 
     if (src) {
-      return `![${this.escapeTextForLink(alt)}](${src})`;
+      let text = `![${this.escapeTextForLink(alt)}](${src})`;
+
+      if (alt && alt.startsWith('http')) {
+        text = `[${text}](${alt})`;
+      }
+      return text;
     }
 
     return '';
