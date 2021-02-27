@@ -10,7 +10,7 @@ export default {
     exports: 'default',
     file: pkg.main,
     format: 'esm',
-    banner: ['to-mark', `@version ${pkg.version} | ${new Date().toDateString()}`].join('\n'),
+    banner: ['/*\nto-mark', `@version ${pkg.version} | ${new Date().toDateString()}\n*/`].join('\n'),
     sourcemap: true,
   },
   external: [...Object.keys(pkg.devDependencies)],
