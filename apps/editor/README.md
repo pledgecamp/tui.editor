@@ -1,3 +1,52 @@
+**This is a of https://github.com/nhn/tui.editor packaged as module. It is not well tested, use at your own risk**
+
+Only the standard `editor` app is available.
+
+Usage is slightly different. Here is an example of usage in a Vue SFC, build with Vite:
+
+```vue
+<template>
+<div ref="editor" />
+</template>
+
+<script>
+import Editor from '@pledgecamp/toast-ui-editor';
+
+export default {
+  mounted() {
+    new Editor({
+      el: this.$refs.editor,
+      initialEditType: 'wysiwyg',
+      hideModeSwitch: true,
+      height: '400px',
+      initialValue: '## Test',
+      placeholder: 'Write something here...',
+    });
+  }
+};
+</script>
+
+<style lang="postcss">
+@import '@pledgecamp/toast-ui-editor/dist/css/contents.css';
+@import '@pledgecamp/toast-ui-editor/dist/css/editor.css';
+</style>
+```
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
 # ![TOAST UI Editor](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)
 
 [![npm](https://img.shields.io/npm/v/@toast-ui/editor.svg)](https://www.npmjs.com/package/@toast-ui/editor)
