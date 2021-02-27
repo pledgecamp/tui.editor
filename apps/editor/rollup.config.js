@@ -26,7 +26,7 @@ export default {
   plugins: [
     commonjs(),
     css(),
-    resolve(),
+    resolve({ moduleDirectories: ['node_modules', '../libs'] }),
     sourceMaps(),
     copy({
       targets: [
