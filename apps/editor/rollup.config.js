@@ -13,10 +13,12 @@ export default {
     file: pkg.main,
     format: 'esm',
     banner: [
+      '/*',
       pkg.name,
-        `@version ${pkg.version} | ${new Date().toDateString()}`,
-        `@author ${pkg.author}`,
-        `@license ${pkg.license}`
+      `@version ${pkg.version} | ${new Date().toDateString()}`,
+      `@author ${pkg.author}`,
+      `@license ${pkg.license}`,
+      '*/'
     ].join('\n'),
     sourcemap: true,
   },
