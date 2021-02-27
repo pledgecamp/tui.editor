@@ -11,7 +11,7 @@ import addClass from 'tui-code-snippet/domUtil/addClass';
 import removeClass from 'tui-code-snippet/domUtil/removeClass';
 import { createMarkdownToHTML } from './markdownToHTML';
 
-import { sendHostName, sanitizeLinkAttribute } from './utils/common';
+import { sanitizeLinkAttribute } from './utils/common';
 
 import MarkdownEditor from './markdownEditor';
 import MarkdownPreview from './mdPreview';
@@ -300,10 +300,6 @@ class ToastUIEditor {
     __nedInstance.push(this);
 
     this._addDefaultCommands();
-
-    if (this.options.usageStatistics) {
-      sendHostName();
-    }
 
     register(this);
   }
