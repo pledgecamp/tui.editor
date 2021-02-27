@@ -1,6 +1,6 @@
 {
   "name": "@pledgecamp/toast-ui-editor",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "GFM  Markdown Wysiwyg Editor - Productive and Extensible",
   "keywords": [
     "nhn",
@@ -17,7 +17,9 @@
   "files": [
     "dist/*.js",
     "dist/*.esm",
-    "dist/*.css",
+    "dist/*.map",
+    "dist/css/*.css",
+    "dist/img/*",
     "dist/i18n",
     "index.d.ts"
   ],
