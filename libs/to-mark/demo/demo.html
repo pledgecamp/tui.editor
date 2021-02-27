@@ -4,13 +4,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="UTF-8" />
     <title>TITLE HERE</title>
-    <script src="../dist/to-mark.js"></script>
   </head>
   <body>
     <textarea id="inputHtml" rows="20" cols="100"></textarea><br />
     <button type="button" id="button">Convert!!</button>
+    <a href="./demo2.html"><button type="button" id="demo2">Demo2</button></a>
     <pre id="preview" style="width:600px;white-space: pre-wrap;"></pre>
-    <script>
+    <script type="module">
+      import toMark from '../src/index.js';
       var textArea = document.getElementById('inputHtml'),
         preview = document.getElementById('preview'),
         button = document.getElementById('button');

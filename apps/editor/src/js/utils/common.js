@@ -1,11 +1,6 @@
 import isUndefined from 'tui-code-snippet/type/isUndefined';
-import sendHostname from 'tui-code-snippet/request/sendHostname';
 
 export const isMac = /Mac/.test(navigator.platform);
-
-export function sendHostName() {
-  sendHostname('editor', 'UA-129966929-1');
-}
 
 export function includes(arr, targetItem) {
   return arr.indexOf(targetItem) !== -1;
@@ -26,7 +21,7 @@ export function sanitizeLinkAttribute(attribute) {
   const linkAttribute = {};
 
   availableLinkAttributes.forEach(key => {
-    if (!isUndefined(attribute[key])) {
+    if (attribute[key] !== undefined) {
       linkAttribute[key] = attribute[key];
     }
   });
