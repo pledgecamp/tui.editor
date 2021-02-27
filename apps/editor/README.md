@@ -1,4 +1,4 @@
-**This is a of https://github.com/nhn/tui.editor packaged as module. It is not well tested, use at your own risk**
+**This is a fork of https://github.com/nhn/tui.editor packaged as a module. It is not well tested, use at your own risk**
 
 Only the standard `editor` app is available.
 
